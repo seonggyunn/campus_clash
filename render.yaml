@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: campus-clash
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start -- --port $PORT
+    envVars:
+      - key: NODE_VERSION
+        value: 24
