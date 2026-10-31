@@ -4,6 +4,7 @@ services:
     runtime: node
     plan: free
     buildCommand: npm ci && npm run build
+    healthCheckPath: /
     startCommand: npm run start -- --port $PORT
     envVars:
       - key: NODE_VERSION
